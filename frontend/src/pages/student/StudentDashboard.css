@@ -1,0 +1,65 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+.navbar {
+  background: #25245b;
+  color: white;
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.dashboard {
+  padding: 35px;
+}
+
+.course-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 3px 10px #ddd;
+}
+
+.progress-bg {
+  background: #ddd;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #6257d9;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.course-card button {
+  background: #6257d9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
