@@ -1,14 +1,23 @@
-
 import React from "react";
 
 function ProgressBar({ percentage }) {
   return (
-    <div className="progress-container">
-      <div className="progress-bg">
+    <div>
+      <div
+        style={{
+          background: "#ddd",
+          height: "10px",
+          borderRadius: "10px"
+        }}
+      >
         <div
-          className="progress-fill"
-          style={{ width: `${percentage}%` }}
-        ></div>
+          style={{
+            width: `${percentage}%`,
+            background: "blue",
+            height: "10px",
+            borderRadius: "10px"
+          }}
+        />
       </div>
 
       <p>{percentage}% Completed</p>

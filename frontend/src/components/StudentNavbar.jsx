@@ -1,42 +1,17 @@
-
 import React from "react";
-import StudentNavbar from "../../components/StudentNavbar";
-import CourseCard from "../../components/CourseCard";
-import "./StudentDashboard.css";
 
-function StudentDashboard() {
+function StudentNavbar() {
   return (
-    <div>
-      <StudentNavbar />
+    <nav className="navbar">
+      <h2>LearnHub</h2>
 
-      <div className="dashboard" id="dashboard">
-        <h1>Welcome Back, Student!</h1>
-        <p>Continue your learning journey.</p>
-
-        <h2>My Courses</h2>
-
-        <div className="course-list" id="courses">
-          <CourseCard
-            title="React JS"
-            instructor="Pranav"
-            progress={60}
-          />
-
-          <CourseCard
-            title="Node JS"
-            instructor="Disha"
-            progress={35}
-          />
-
-          <CourseCard
-            title="MongoDB"
-            instructor="Gaurav"
-            progress={80}
-          />
-        </div>
+      <div>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#courses">My Courses</a>
+        <a href="#available">Available Courses</a>
       </div>
-    </div>
+    </nav>
   );
 }
 
-export default StudentDashboard;
+export default StudentNavbar;
