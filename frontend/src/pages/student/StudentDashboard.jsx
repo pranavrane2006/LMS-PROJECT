@@ -1,27 +1,39 @@
 
 import React from "react";
+import StudentNavbar from "../../components/StudentNavbar";
+import CourseCard from "../../components/CourseCard";
+import "./StudentDashboard.css";
 
 function StudentDashboard() {
   return (
     <div>
-      <h1>Welcome Back, Student!</h1>
-      <p>Welcome to your Learning Management System.</p>
+      <StudentNavbar />
 
-      <h2>My Courses</h2>
+      <div className="dashboard" id="dashboard">
+        <h1>Welcome Back, Student!</h1>
+        <p>Continue your learning journey.</p>
 
-      <div>
-        <h3>React JS</h3>
-        <p>Progress: 60%</p>
-      </div>
+        <h2>My Courses</h2>
 
-      <div>
-        <h3>Node JS</h3>
-        <p>Progress: 35%</p>
-      </div>
+        <div className="course-list" id="courses">
+          <CourseCard
+            title="React JS"
+            instructor="Pranav"
+            progress={60}
+          />
 
-      <div>
-        <h3>MongoDB</h3>
-        <p>Progress: 80%</p>
+          <CourseCard
+            title="Node JS"
+            instructor="Disha"
+            progress={35}
+          />
+
+          <CourseCard
+            title="MongoDB"
+            instructor="Gaurav"
+            progress={80}
+          />
+        </div>
       </div>
     </div>
   );
