@@ -6,6 +6,7 @@ function CourseCard({ title, instructor, progress }) {
   return (
     <div className="course-card">
       <h3>{title}</h3>
+
       <p>Instructor: {instructor}</p>
 
       <ProgressBar percentage={progress} />
