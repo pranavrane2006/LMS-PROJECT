@@ -355,3 +355,41 @@ button:disabled {
     width: 100%;
   }
 }
+
+/* ENROLLMENT NOTIFICATION */
+
+.notification {
+  margin: 20px 35px 0;
+  padding: 14px 18px;
+  background-color: #e4f8eb;
+  color: #176b37;
+  border: 1px solid #a5dfb7;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification button {
+  background: transparent;
+  color: #176b37;
+  font-size: 22px;
+  padding: 0 8px;
+}
+
+/* DISABLED ENROLL BUTTON */
+
+.course-card button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* UNENROLL BUTTON */
+
+.unenroll-button {
+  background-color: #d9534f;
+}
+
+.unenroll-button:hover {
+  background-color: #b52b27;
+}

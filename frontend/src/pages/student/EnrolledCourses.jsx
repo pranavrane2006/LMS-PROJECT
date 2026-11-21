@@ -1,35 +1,46 @@
 
 import React from "react";
 
-function EnrolledCourses() {
-  const courses = [
-    { id: 1, title: "React JS", progress: 60 },
-    { id: 2, title: "Node JS", progress: 35 },
-    { id: 3, title: "MongoDB", progress: 80 }
-  ];
-
+function EnrolledCourses({ enrolledCourses, onUnenroll }) {
   return (
     <div className="dashboard">
       <h1>My Enrolled Courses</h1>
-      <p>Continue learning from where you left off.</p>
+
+      <p>
+        You are enrolled in {enrolledCourses.length} courses.
+      </p>
 
       <div className="course-list">
-        {courses.map((course) => (
-          <div className="course-card" key={course.id}>
-            <h3>{course.title}</h3>
+        {enrolledCourses.length > 0 ? (
+          enrolledCourses.map(course => (
+            <div className="course-card" key={course.id}>
+              <h2>{course.title}</h2>
+              <p>{course.description}</p>
+              <p>Instructor: {course.instructor}</p>
+              <p>Level: {course.level}</p>
+              <p>Duration: {course.duration}</p>
 
-            <p>{course.progress}% Completed</p>
+              <a href="#learning">
+                <button>Continue Learning</button>
+              </a>
 
-            <div className="progress-bg">
-              <div
-                className="progress-fill"
-                style={{ width: `${course.progress}%` }}
-              ></div>
+              <button
+                className="unenroll-button"
+                onClick={() => onUnenroll(course.id)}
+              >
+                Unenroll
+              </button>
             </div>
-
-            <button>Continue Learning</button>
+          ))
+        ) : (
+          <div className="course-card">
+            <h2>No Courses Enrolled Yet</h2>
+            <p>Visit Available Courses to start learning.</p>
+            <a href="#available">
+              <button>Explore Courses</button>
+            </a>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
