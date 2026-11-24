@@ -10,6 +10,7 @@ function StudentNavbar() {
         <a href="#dashboard">Dashboard</a>
         <a href="#courses">My Courses</a>
         <a href="#available">Available Courses</a>
+        <a href="#profile">My Profile</a>
       </div>
 
       <span>Student</span>

@@ -7,6 +7,7 @@ import EnrolledCourses from "./pages/student/EnrolledCourses";
 import CourseDetails from "./pages/student/CourseDetails";
 import LearningPage from "./pages/student/LearningPage";
 import StudentNavbar from "./components/StudentNavbar";
+import StudentProfile from "./pages/student/StudentProfile";
 
 function App() {
   const [page, setPage] = useState(
@@ -76,6 +77,7 @@ function App() {
       {page === "#details" && <CourseDetails />}
 
       {page === "#learning" && <LearningPage />}
+      {page === "#profile" && <StudentProfile />}
     </>
   );
 }
